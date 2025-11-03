@@ -5,7 +5,7 @@ var ctx = document.getElementById("chart-bars").getContext("2d");
 new Chart(ctx, {
   type: "bar",
   data: {
-    labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    labels: ["2018","2019","2020", "2021", "2022", "2023", "2024", "2025"],
     datasets: [
       {
         label: "Sales",

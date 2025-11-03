@@ -17,10 +17,10 @@ gradientStroke2.addColorStop(0, "rgba(20,23,39,0)"); //purple colors
 new Chart(ctx2, {
   type: "line",
   data: {
-    labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    labels: ["2018","2019", "2020", "2021", "2022", "2023", "2024", "2025"],
     datasets: [
       {
-        label: "Mobile apps",
+        label: "Pelaku Usaha",
         tension: 0.4,
         borderWidth: 0,
         pointRadius: 0,
@@ -32,7 +32,7 @@ new Chart(ctx2, {
         maxBarThickness: 6,
       },
       {
-        label: "Websites",
+        label: "Peleburan",
         tension: 0.4,
         borderWidth: 0,
         pointRadius: 0,
