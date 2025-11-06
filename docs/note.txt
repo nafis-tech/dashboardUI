@@ -1,0 +1,48 @@
+All Page :
+Filter by Head Table / searching
+Download File Table
+
+Peleburan Badan Usaha : 
+TABLE :
+- Nama Perusahaan
+- Sektor Industri
+- Alamat
+- Tanggal Efektif Peleburan
+- Nilai Transaksi
+
+Grafik :
+- Grafik Tren 5th (Total Jumlah Perusahaan vs Nilai Transaksi)
+- Top 5 sektor dengan frekuensi peleburan tertinggi.
+- Rata-Rata Waktu Penyeleseian Kasus vs TOtal Dana Terkumpul (cek)
+
+
+Perpindahan Aset 
+- Nama Badan Usaha
+- Nilai aset(IDR)
+• Pihak penerima aset
+- hubungan afiliasi
+• Lokasi aset / Alamat,
+- alasan perpindahan
+- tanggal transaksi
+
+Grafik  
+- Jumlah laporan perpindahan aset (by tahun, sektor, provinsi). kotak
+- Nilai total aset yang dipindahkan (sum & per sektor).
+- Top 5 perusahaan dengan volume tertinggi.
+• Jumlah Status verifikasi & approval
+- tren kenaikan & rata-rata nilai perpindahan aset.
+
+
+Penggabungan Badan Usaha
+
+
+
+
+
+
+
+
+
+
+
+
