@@ -396,7 +396,11 @@
             id="myChart" style="width:100%; max-width:600px; height:500px;">
           </div>
             <br>
-          <div></div>
+          <div style="background-color: rgb(252, 253, 253);padding: 5rem;">
+            <canvas id="myChartLine" style="width:100%;max-width:600px"></canvas>
+          </div>
+          <br>
+
 
         <div class="flex flex-wrap -mx-3">
         
@@ -969,6 +973,30 @@
       chart.draw(data, options);
 
       }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <script>
+      const xValues = ["Pemerintahan", "Jasa", "Pendidikan", "UMKM", "Perdagangan"];
+      const yValues = [55, 49, 44, 24, 15, 10];
+      const barColors = ["red", "green","blue","orange","brown"];
+
+      new Chart("myChartLine", {
+        type: "bar",
+        data: {
+          labels: xValues,
+          datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+          }]
+        },
+        options: {
+          legend: {display: false},
+          title: {
+            display: true,
+            text: "Top 5 Sektor Frekuensi Peleburan Tertinggi"
+          }
+        }
+      });
   </script>
 
 </html>
