@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
     <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
-    <title>Soft UI Dashboard Tailwind</title>
+    <title>Dashboard Report KPPU</title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <!-- Font Awesome Icons -->
@@ -43,7 +43,7 @@
         <i class="absolute top-0 right-0 hidden p-4 opacity-50 cursor-pointer fas fa-times text-slate-400 xl:hidden" sidenav-close></i>
         <a class="block px-8 py-6 m-0 text-sm whitespace-nowrap text-slate-700" href="../index.html" target="_blank">
           <img src="../assets/img/logo-ct.png" class="inline h-full max-w-full transition-all duration-200 ease-nav-brand max-h-8" alt="main_logo" />
-          <span class="ml-1 font-semibold transition-all duration-200 ease-nav-brand">Soft UI Dashboard</span>
+          <span class="ml-1 font-semibold transition-all duration-200 ease-nav-brand">Dashboard Report KPPU</span>
         </a>
       </div>
 
@@ -258,6 +258,7 @@
 
       </div>
     </aside>
+   
 
     <main class="ease-soft-in-out xl:ml-68.5 relative h-full max-h-screen rounded-xl transition-all duration-200">
       <!-- Navbar -->
@@ -391,23 +392,29 @@
 
       <div class="w-full px-6 py-6 mx-auto">
         <!-- table 1 -->
+          <div
+            id="myChart" style="width:100%; max-width:600px; height:500px;">
+          </div>
+            <br>
+          <div></div>
 
         <div class="flex flex-wrap -mx-3">
+        
           <div class="flex-none w-full max-w-full px-3">
             <div class="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-soft-xl rounded-2xl bg-clip-border">
               <div class="p-6 pb-0 mb-0 bg-white border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
-                <h6>Authors table</h6>
+                <h6>Data Peleburan Badan Usaha</h6>
               </div>
               <div class="flex-auto px-0 pt-0 pb-2">
                 <div class="p-0 overflow-x-auto">
                   <table class="items-center w-full mb-0 align-top border-gray-200 text-slate-500">
                     <thead class="align-bottom">
                       <tr>
-                        <th class="px-6 py-3 font-bold text-left uppercase align-middle bg-transparent border-b border-gray-200 shadow-none text-xxs border-b-solid tracking-none whitespace-nowrap text-slate-400 opacity-70">Author</th>
-                        <th class="px-6 py-3 pl-2 font-bold text-left uppercase align-middle bg-transparent border-b border-gray-200 shadow-none text-xxs border-b-solid tracking-none whitespace-nowrap text-slate-400 opacity-70">Function</th>
-                        <th class="px-6 py-3 font-bold text-center uppercase align-middle bg-transparent border-b border-gray-200 shadow-none text-xxs border-b-solid tracking-none whitespace-nowrap text-slate-400 opacity-70">Status</th>
-                        <th class="px-6 py-3 font-bold text-center uppercase align-middle bg-transparent border-b border-gray-200 shadow-none text-xxs border-b-solid tracking-none whitespace-nowrap text-slate-400 opacity-70">Employed</th>
-                        <th class="px-6 py-3 font-semibold capitalize align-middle bg-transparent border-b border-gray-200 border-solid shadow-none tracking-none whitespace-nowrap text-slate-400 opacity-70"></th>
+                        <th class="px-6 py-3 font-bold text-left uppercase align-middle bg-transparent border-b border-gray-200 shadow-none text-xxs border-b-solid tracking-none whitespace-nowrap text-slate-400 opacity-70">Nama Perusahaan</th>
+                        <th class="px-6 py-3 pl-2 font-bold text-left uppercase align-middle bg-transparent border-b border-gray-200 shadow-none text-xxs border-b-solid tracking-none whitespace-nowrap text-slate-400 opacity-70">Sektor Industri</th>
+                        <th class="px-6 py-3 font-bold text-center uppercase align-middle bg-transparent border-b border-gray-200 shadow-none text-xxs border-b-solid tracking-none whitespace-nowrap text-slate-400 opacity-70">Nilai Transaksi</th>
+                        <th class="px-6 py-3 font-bold text-center uppercase align-middle bg-transparent border-b border-gray-200 shadow-none text-xxs border-b-solid tracking-none whitespace-nowrap text-slate-400 opacity-70">Tanggal Efektif Peleburan</th>
+                        <th class="px-6 py-3 font-bold text-center uppercase align-middle bg-transparent border-b border-gray-200 shadow-none text-xxs border-b-solid tracking-none whitespace-nowrap text-slate-400 opacity-70">Alamat</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -934,4 +941,34 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- main script file  -->
   <script src="../assets/js/soft-ui-dashboard-tailwind.js?v=1.0.5" async></script>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script>
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+      // Set Data
+      const data = google.visualization.arrayToDataTable([
+        ['2020', 'Mhl'],
+        ['2021',54.8 ],
+        ['2022',48.6],
+        ['2023',44.4],
+        ['2024',23.9],
+        ['2025',14.5]
+      ]);
+
+      // Set Options
+      const options = {
+        title:'Tren 5 Tahun Perusahaan vs Nilai Transaksi',
+        is3D:true
+      };
+
+      // Draw
+      const chart = new google.visualization.PieChart(document.getElementById('myChart'));
+      chart.draw(data, options);
+
+      }
+  </script>
+
 </html>
